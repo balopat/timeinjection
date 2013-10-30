@@ -14,8 +14,8 @@ class WallSpec extends FlatSpec with ShouldMatchers {
     wall.message("Hello, HelloWorld!")
 
     wall.messages should equal(
-      List(Message("Hello, HelloWorld!", timeAtFirst),
-        Message("Hello World!", timeAtSecond))
+      List(Message("Hello, HelloWorld!", timeAtSecond),
+        Message("Hello World!", timeAtFirst))
     )
   }
 }
