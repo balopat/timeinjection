@@ -2,11 +2,11 @@ package com.balopat.timeinjection
 
 import java.util.Date
 
-class Wall {
+class Wall(clock: Clock) {
     var messages = List[Message]()
 
     def message(message: String) {
-       messages ::= Message(message, new Date())
+       messages ::= Message(message, clock.getTime())
     }
 }
 
